@@ -5,3 +5,7 @@ $COMPOSE up
 $COMPOSE scale cassandran=1
 
 docker exec -ti platform_cassandra_1 nodetool status
+
+$COMPOSE scale james_elastic=2
+
+docker logs -f platform_james_elastic_1
