@@ -97,3 +97,11 @@ services:
 
   cassandra:
     image: cassandra:2.2.3
+
+  cassandran:
+    image: cassandra:2.2.3
+    links:
+      - cassandra:seed
+    environment:
+      - CASSANDRA_SEEDS=seed
+
